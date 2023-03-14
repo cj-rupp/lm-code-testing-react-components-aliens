@@ -1,19 +1,19 @@
 import { render, screen } from '@testing-library/react';
-import Population from './Population';
+import Maths from './Maths';
 
-test('renders iput element for population name', () => {
+test('renders selection element for the Maths test', () => {
 	// we can hold onto the object returned from render()
 	// this object has a container property that we can destructure and inspect
 	render(
-        <Population
-            populationCount='7bn'
-            placeHolder='Enter population count here:'
+        <Maths
+            mathSum='4'
         />);
     
-	const populationRubrik = screen.getByText(
-		/Number of beings:/i
+	const mathsRubrik = screen.getByText(
+		/What is 2\+2\?/i
 	);
-	expect(populationRubrik).toBeInTheDocument();
+
+	expect(mathsRubrik).toBeInTheDocument();
 	// the container is just a normal DOM element, so we can look at normal properties like '.firstChild'
 	// for example, the firstChild of our container should be our form element
 });

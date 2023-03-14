@@ -12,11 +12,11 @@ const Species: React.FC<SpeciesProps> = ({
     maxChars
     }) => {
         return (
-            <Fragment>
-              <label htmlFor="speciesName">Species Name</label>
-              <input  id='speciesName' type='text'/>
-              <p>validation messages</p>
-            </Fragment>
+            <>
+              <label htmlFor="speciesName">Species Name:</label>
+              <input  id='speciesName' name='speciesName' type='text' placeholder={placeHolder}/>
+              <p className='validation-message'>validation messages</p>
+            </>
         )};
 
 export default Species;

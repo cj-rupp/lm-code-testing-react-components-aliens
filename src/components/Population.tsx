@@ -9,9 +9,9 @@ const Population: React.FC<PopulationProps> = ({
     }) => {
         return (
             <>
-              <label htmlFor='populationCount'>Number of beings</label>
-              <input  id='populationCount' type='text'/>
-              <p>validation messages</p>
+              <label htmlFor='populationCount'>Number of beings:</label>
+              <input  id='populationCount' name='populationCount' type='text' placeholder={placeHolder}/>
+              <p className='validation-message'>validation messages</p>
             </>
         )};
 

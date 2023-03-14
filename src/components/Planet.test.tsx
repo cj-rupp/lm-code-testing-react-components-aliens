@@ -12,7 +12,7 @@ test('renders iput element for planet name', () => {
         />);
     
 	const planetRubrik = screen.getByText(
-		/Planet Name/i
+		/Planet Name:/i
 	);
 	expect(planetRubrik).toBeInTheDocument();
 	// the container is just a normal DOM element, so we can look at normal properties like '.firstChild'

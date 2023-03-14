@@ -11,9 +11,9 @@ const Planet: React.FC<PlanetProps> = ({
     }) => {
         return (
             <>
-              <label htmlFor="speciesName">Planet Name</label>
-              <input  id='speciesName' type='text'/>
-              <p>validation messages</p>
+              <label htmlFor="planetName">Planet Name:</label>
+              <input  id='planetName' name='planetName' type='text' placeholder={placeHolder}/>
+              <p className='validation-message'>validation messages</p>
             </>
         )};
 

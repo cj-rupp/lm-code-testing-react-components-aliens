@@ -12,9 +12,13 @@ test('renders iput element for species name', () => {
         />);
     
 	const speciesRubrik = screen.getByText(
-		/Species Name/i
+		/Species Name:/i
 	);
+
+	const speciesInput = screen.getByPlaceholderText(
+		/Enter species name here:/i
+	)
+
 	expect(speciesRubrik).toBeInTheDocument();
-	// the container is just a normal DOM element, so we can look at normal properties like '.firstChild'
-	// for example, the firstChild of our container should be our form element
+	expect(speciesInput).toBeInTheDocument();
 });
